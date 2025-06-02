@@ -1,17 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxanlb6bkj4hx"]
+[gd_scene load_steps=4 format=3 uid="uid://bxanlb6bkj4hx"]
 
 [ext_resource type="PackedScene" uid="uid://dovexvc28fys5" path="res://assets/main character model/momo dai copy.glb" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dx5c401ks6wok" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
 [node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_onrkg")
 
-[node name="pivot" type="Node3D" parent="."]
-visible = false
+[node name="Pivot" type="Node3D" parent="."]
 
-[node name="momo dai" parent="pivot" instance=ExtResource("1_4flbx")]
-transform = Transform3D(0.1443, 0, 0, 0, 0.1443, 0, 0, 0, 0.1443, 0, 0, 0)
+[node name="momo dai" parent="Pivot" instance=ExtResource("1_4flbx")]
+transform = Transform3D(1.09414, 0, 0, 0, 1.09414, 0, 0, 0, 1.09414, 0, -1.49012e-08, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.721432, 0, 0, 0, 0.439175, 0, 0, 0, 0.733093, 0, 0.181463, 0)
+transform = Transform3D(5.85689, 0, 0, 0, 3.56541, 0, 0, 0, 5.95156, 0, 2.24382, 0)
 shape = SubResource("CapsuleShape3D_onrkg")
